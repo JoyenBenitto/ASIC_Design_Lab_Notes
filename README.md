@@ -114,6 +114,9 @@ riscv64-unknown-elf-objdump -d  sum1ton.o
 ``` shell
 riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
+
+![image](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/9c8c128e-6b29-49f3-9db8-7b003f0a7560)
+
 ## Integer number representation
 - The below is the C code for finding max unsigned number
 ```c
