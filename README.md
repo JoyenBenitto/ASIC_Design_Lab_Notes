@@ -83,9 +83,11 @@ cat lab1/sum1ton.c
 - To generate a RISC-V object file we need to use the  ```riscv64-unknown-elf-gcc```
 
 ```bash
+cd lab1
 riscv64-unknown-elf-gcc -01 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ls -ltr sum1ton.o
 riscv64-unknown-elf-gcc -S sum1ton.c
+vim sum1ton.c
 ```
 ![Screenshot from 2023-08-21 22-12-02](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/e4e63183-f468-434a-ab69-21fe6fb61f34)
 
