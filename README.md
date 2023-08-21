@@ -221,10 +221,10 @@ int main()
   result = load(0x0, count+1);
   printf("Sum of numbers from 1 to 9 is %d\n", result);
 }
+```
 
 ![Screenshot from 2023-08-21 23-59-18](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/a217e3b3-afaf-47ff-8b70-32e6a62836e9)
 
-```
 ### Assembly
 ```asm
 .section .text
