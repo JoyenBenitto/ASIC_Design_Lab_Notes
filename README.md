@@ -1,21 +1,9 @@
 # VSD_ASIC_DESIGN
 
-# PES_ASIC_CLASS
-This Repository Guides you to complete ASIC flow from scratch (FACULTY : Mahesh Awati, GUIDE : Kunal Ghosh)
+This Repository Guides you the process of complete ASIC flow, we begin our journew with simulating basic C code and go all the way to putting together an SoC ready to be fabbed out.  
+*(FACULTY : Mahesh Awati, GUIDE : Kunal Ghosh)*
 
-## The COURSE files are present under those respective day folders 
-
-### Solutions to frequenty occuring errors are in Error_solution.md
-
-## Install the Prerequisites(for ubuntu)
-
-```
-sudo apt update
-sudo apt upgrade
-chmod +x run_ubuntu.sh
-./run_ubuntu.sh
-```
-The installed contents will be available at ~/riscv_toolchain
+> The COURSE files are present under those respective Lab directories, make sure to download all the dependencies before proceeding with the lab 
 
 # Introduction
 ### Flow : HLL -> ALP -> Binary -> (HDL) -> GDS
