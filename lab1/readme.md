@@ -52,6 +52,7 @@ cat lab1/sum1ton.c
 riscv64-unknown-elf-gcc -01 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ls -ltr sum1ton.o
 ```
+![Screenshot from 2023-08-21 22-12-02](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/b018e397-29e8-40eb-90e6-d8fc6a2aaeb4)
 
 >*Few flags we used*
 >o1 - Level 1 optimization
