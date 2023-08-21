@@ -142,6 +142,29 @@ int main(){
 	return 0;
 }
 ```
+### Debug
+
+```
+spike -d $(which pk) sum1ton.c
+```
+![image](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/26e761d9-4ed8-45e4-a1ba-bc810accf54d)
+
+- press ENTER : shows the first line and successive ENTER shows successive lines
+- reg 0 a2 : checks content of register a2 0th core
+- q : quit the debug process
+
+**Difference between the ALP commands when used different optimizers**
+- use the command ```riscv64-unknown-elf-objdump -d 1_to_N.o | less```
+- use ``` /instance``` to search for an instance 
+- press ENTER
+- press ```n``` to search next occurance
+- press ```N``` to search for previous occurance. 
+- use ```esc :q``` to quit
+
+## Integer number Representation (n-bit)
+- Range of Unsigned numbers : [0, (2^n)-1 ]
+* Range of signed numbes : Positive : [0 , 2^(n-1)-1]
+                         Negative : [-1 to 2^(n-1)]
 
 ---
 
