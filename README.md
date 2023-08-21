@@ -114,6 +114,33 @@ riscv64-unknown-elf-objdump -d  sum1ton.o
 ``` shell
 riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
+## Integer number representation
+- The below is the C code for finding max unsigned number
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	unsigned long long int max = (unsigned long long int)(pow(2,10)*-1);
+	printf("highest number represented by unsigned long long int is %llu \n",max);
+	return 0;
+}
+```
+- The below is the C code for finding range of signed numbers
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	long long int max = (long long int)(pow(2,63)-1);
+	long long int min = (long long int)(pow(2,63)*(-1));
+	printf("highest number represented by long long int is %lld \n",max);
+	printf("lowest number represented by long long int is %lld \n",min);
+	return 0;
+}
+```
+
+---
 
  ## Lab 2
  [LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
