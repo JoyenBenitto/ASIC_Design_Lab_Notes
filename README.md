@@ -3,7 +3,7 @@
 This Repository Guides you the process of complete ASIC flow, we begin our journey with simulating basic C code and go all the way to putting together an SoC ready to be fabbed out.  
 *(FACULTY : Mahesh Awati, GUIDE : Kunal Ghosh)*
 
-> The COURSE files are present under those respective Lab directories, make sure to download all the dependencies before proceeding with the lab 
+> The course files are present under those respective Lab directories, make sure to download all the dependencies before proceeding with the lab 
 
 # Introduction
 ### Flow : HLL -> ALP -> Binary -> (HDL) -> GDS
