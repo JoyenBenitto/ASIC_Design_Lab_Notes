@@ -222,8 +222,10 @@ int main()
   printf("Sum of numbers from 1 to 9 is %d\n", result);
 }
 ```
-
+- Using gcc
 ![Screenshot from 2023-08-21 23-59-18](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/a217e3b3-afaf-47ff-8b70-32e6a62836e9)
+- Using spike:
+![Screenshot from 2023-08-22 00-07-36](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/99fceedc-12c2-422f-85a1-a11d07edb5f7)
 
 ### Assembly
 ```asm
