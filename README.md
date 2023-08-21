@@ -148,7 +148,6 @@ int main(){
  ## Lab 2
  [LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
 
- # Lab 2
 ### RISC-V Instructions:
 
 RISC-V instructions can be categorized into different categories based on their functionality. Here are some common types of RISC-V instructions:
