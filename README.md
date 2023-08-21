@@ -6,7 +6,13 @@ This Repository Guides you the process of complete ASIC flow, we begin our journ
 > The course files are present under those respective Lab directories, make sure to download all the dependencies before proceeding with the lab 
 
 # Introduction
-### Flow : HLL -> ALP -> Binary -> (HDL) -> GDS
+### Flow : 
+```
+  +------+     +------+     +---------+     +----+     +------+
+  |  HLL | --> |  ALP | --> |  Binary | --> | HDL | --> | GDS  |
+  +------+     +------+     +---------+     +----+     +------+
+
+```
 #### 1. HLL -> High level language (c , c++) 
 - A high-level programming language is a type of programming language that is designed to be more human-readable and user-friendly compared to low-level languages like assembly or machine code.
 
