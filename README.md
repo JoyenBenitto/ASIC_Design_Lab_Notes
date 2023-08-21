@@ -31,5 +31,5 @@ ____System Software____
 - GDS : Layout
 
 # COURSE 
- [DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain]([./lab1/README.md](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab1#readme)https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab1#readme)
+ [DAY 1: Introduction to RISCV ISA and GNU Compiler Toolchain](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab1#readme)
  
