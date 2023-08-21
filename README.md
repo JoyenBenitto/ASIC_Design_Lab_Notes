@@ -209,7 +209,7 @@ RISC-V instructions have a common structure with several fields that serve diffe
 
 ### C Program - Sum of numbers from 1 to 9
 
-```
+```c
 #include <stdio.h>
 
 extern int load(int x, int y);
@@ -223,7 +223,7 @@ int main()
 }
 ```
 ### Assembly
-```
+```asm
 .section .text
 .global load
 .type load, @function
