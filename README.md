@@ -31,5 +31,62 @@ ____System Software____
 - GDS : Layout
 
 # COURSE 
+ ## LAB 1
  [LAB 1: Introduction to RISCV ISA and GNU Compiler Toolchain](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab1#readme)<br>
+Dependencies
+
+    Follow the instruction in the README to install the relevant tools:
+        RISC-V GNU Compiler Toolchain
+        RISC-V Proxy Kernel
+        RISC-V Spike
+
+C Code
+
+    Open your terminal and run the following command to create a .c file.
+
+vim lab1/sum1ton.c 
+
+we are writing a C program that finds the sum of number from 1 to n . We are going to use SPIKE simulator to simulate the code.
+
+#include<stdio.h>
+
+int main(){
+	int sum =0, n=5;
+
+	for(int i= 0; i <= n; ++i){
+		sum += i;
+	}
+
+	printf("Sum of the series is %d", sum);
+	return 0;
+}
+
+    To run the above code use :
+
+gcc lab1/sum1ton.c
+
+    However this will return an executable for the system it is run on. I am running it on an intel-i5 so the assembly is not RISC-V Assembly
+
+cat lab1/sum1ton.c
+
+C to Disassembly
+
+    To generate a RISC-V object file we need to use the riscv64-unknown-elf-gcc
+
+riscv64-unknown-elf-gcc -01 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+ls -ltr sum1ton.o
+
+    Few flags we used o1 - Level 1 optimization lp64 - l (long integer) p(pointer)
+
+    To view the assembly code:
+
+riscv64-unknown-elf-objdump -d  sum1ton.o 
+
+    Repeat the above but with ofast :
+
+riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+
+Debug
+
+ ## Lab 2
  [LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
