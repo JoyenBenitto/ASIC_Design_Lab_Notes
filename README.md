@@ -92,7 +92,7 @@ cat lab1/sum1ton.c
 
 ```bash
 cd lab1
-riscv64-unknown-elf-gcc -01 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ls -ltr sum1ton.o
 riscv64-unknown-elf-gcc -S sum1ton.c
 vim sum1ton.c
@@ -112,7 +112,7 @@ riscv64-unknown-elf-objdump -d  sum1ton.o
 - Repeat the above but with ``` ofast ``` :
 
 ``` shell
-riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
 
  ## Lab 2
