@@ -103,7 +103,6 @@ riscv64-unknown-elf-objdump -d  sum1ton.o
 riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
 
-### Debug
  ## Lab 2
  [LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
 
