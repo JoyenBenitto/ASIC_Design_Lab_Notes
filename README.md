@@ -207,6 +207,42 @@ RISC-V instructions have a common structure with several fields that serve diffe
 
 - **Extension-specific Fields:** Depending on the RISC-V extension being used (e.g., F for floating-point, M for integer multiplication/division), there may be additional fields to accommodate the specific requirements of that extension. These fields are not part of the base RISC-V instruction format.
 
+### C Program - Sum of numbers from 1 to 9
+
+```
+#include <stdio.h>
+
+extern int load(int x, int y);
+
+int main()
+{
+  int result = 0;
+  int count = 9;
+  result = load(0x0, count+1);
+  printf("Sum of numbers from 1 to 9 is %d\n", result);
+}
+```
+### Assembly
+```
+.section .text
+.global load
+.type load, @function
+
+load:
+
+add a4, a0, zero
+add a2, a0, a1
+add a3, a0, zero
+
+loop:
+
+add a4, a3, a4
+addi a3, a3, 1
+blt a3, a2, loop
+add a0, a4, zero
+ret
+```
+
 ### Register Naming in RISC-V according to ABI
 
 ![abi-reg](https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/risc/imgs/regfile.png)
