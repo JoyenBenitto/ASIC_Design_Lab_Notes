@@ -61,16 +61,12 @@ ls -ltr sum1ton.o
 - To view the assembly code:
 
 ```shell
-riscv64-unknown-elf-objdump -d  sum1ton.o 
-```
+riscv64-unknown-elf-objdump -d  sum1ton.o ```
+
 
 - Repeat the above but with ``` ofast ``` :
 
 ``` shell
 riscv64-unknown-elf-gcc -0fast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 ```
-
-### Debug
-
-
-
+![image](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/4740174a-ca12-4906-a45d-f48b1f7ddb95)
