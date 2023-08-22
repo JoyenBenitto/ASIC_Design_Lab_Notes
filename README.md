@@ -281,6 +281,8 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
+![Screenshot from 2023-08-22 10-09-48](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/b9e5e65a-367c-4919-924f-bfadc309601b)
+
 CPU processes the contents of the memory and provides with output using iverilog
 
 Risc-V CPU : Picorv32.v
