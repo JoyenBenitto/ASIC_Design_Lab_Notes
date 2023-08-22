@@ -281,6 +281,14 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
+CPU processes the contents of the memory and provides with output using iverilog
+
+Risc-V CPU : Picorv32.v
+Testbench for verification : testbench.v
+Tool : iverilog
+script : rv32im.sh : has the commands to get the c-program, ALP, converts into hex format, loads into memory of riscv cpu, passes it iverilog and provides the output
+
+![Screenshot from 2023-08-22 09-57-17](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/28174ca7-3a8d-49f8-b4bb-028b53d94f38)
 
 ### Register Naming in RISC-V according to ABI
 
