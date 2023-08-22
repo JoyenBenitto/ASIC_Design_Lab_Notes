@@ -142,6 +142,10 @@ int main(){
 	return 0;
 }
 ```
+```
+One could get the outputs for the above program as discussed above.
+```
+
 ### Debug
 
 ```
@@ -160,6 +164,13 @@ spike -d $(which pk) sum1ton.c
 - press ```n``` to search next occurance
 - press ```N``` to search for previous occurance. 
 - use ```esc :q``` to quit
+
+#### o1:
+![Screenshot from 2023-08-22 08-57-52](https://github.com/JoyenBenitto/pes_asic_class/assets/75515758/d9a186d7-1f42-4a4e-978f-39c6bdeea245)
+
+```
+The Ofast flag can be used the the above command can be run to vew the logs in a similar way !
+```
 
 ## Integer number Representation (n-bit)
 - Range of Unsigned numbers : [0, (2^n)-1 ]
