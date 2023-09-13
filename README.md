@@ -179,8 +179,8 @@ The Ofast flag can be used the the above command can be run to vew the logs in a
 
 ---
 
- ## Lab 2
- [LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
+## Lab 2
+[LAB 2: Introduction to ABI and Basic Verification Flow](https://github.com/JoyenBenitto/VSD_ASIC_Design/tree/main/lab2#readme)
 
 ### RISC-V Instructions:
 
@@ -296,3 +296,50 @@ script : rv32im.sh : has the commands to get the c-program, ALP, converts into h
 
 ![abi-reg](https://web.eecs.utk.edu/~smarz1/courses/ece356/notes/risc/imgs/regfile.png)
 
+
+# RTL Design using Verilog with SKY130 Technology
+
+# Day 1
+### Introduction to verilog RTL Design and Synthesis
+
+Tools Required:
+- gtkwave
+- yosys
+- iverilog
+  
+> In fedora all of the above can be installed using sudo dnf 
+
+## Terminologies
+
+  - Simulator : The RTL should be check if it matches with the specifications provided. This work is done by Simulator and is used to simulate the design for its functionality
+  Example : iverilog
+  Simulator looks for a change in input, based on which the output is evaluated ==> if there is no change in input, Then output is not evaluated.
+
+  - Design : The set of verilog code(s) that represents the provided functionality/Specification in the form of a netlist.
+
+  - Testbench : Setup to apply stimulus(test vectors)to the design inorder to check the functionality using the response obtained.
+    The response is obtained using iverilog in the form of VCD file that is visulaised using gtkwave
+
+  - Synthesizer : Tool required t convert RTL to netlist
+    Example : yosys
+
+  - Netlist : In Synthesis, RTL Design is converted to gate level netlist ie.,design is converted into gates and connections are made between the gates. This is givenout as a file called netlist.
+
+  - liberty(.lib) : It contains all cells required to represent any logic and the cells are of different flavours(different power, delay, operating conditions etc)
+
+## Simulation and Results:
+
+- wirting a simple mux
+- wriite a testbench 
+- and check functionality
+
+```shell
+     
+
+cd /path/to/file/location
+iverilog mux.v mux_tb.v -o mux.out
+./mux.out
+gtkwave mux_tb.vcd
+```
+
+![mux img](Notes/image.png)
