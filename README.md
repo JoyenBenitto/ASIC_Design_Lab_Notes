@@ -341,5 +341,5 @@ iverilog mux.v mux_tb.v -o mux.out
 ./mux.out
 gtkwave mux_tb.vcd
 ```
-
 ![mux img](Notes/image.png)
+
