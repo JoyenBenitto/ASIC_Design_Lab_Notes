@@ -343,3 +343,6 @@ gtkwave mux_tb.vcd
 ```
 ![mux img](Notes/image.png)
 
+![yosys synth](Notes/yosys_mux.png)
+
+![rtl_diag](Notes/rtl_diag.png)
