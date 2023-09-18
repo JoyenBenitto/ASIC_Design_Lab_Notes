@@ -413,14 +413,14 @@ To Check the functionality, We refer to this waveform
 
 ![sync_async_res_wvf](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/5ab8057d-43b6-4d00-9385-46c1ba6279f2)
 
-##DAY 3: Combinational and sequential optimizations
+## DAY 3: Combinational and sequential optimizations
 
 Inorder to optimise a verilog files that has submodules, We have to first flatten it, then optimize ```opt_clean -purge``` and complete the synthesis process
 
 Here we can observe that instead of using ```and``` gate and ```or``` gates, its using ```AOI```
 The synthesis sctipts can be found in the verilog folder, the same steps as above can be followed to visualize the sythesised verilog using yosys.
 
-DAY 4:GLS, SYnthesis solution mismatch
+## DAY 4:GLS, SYnthesis solution mismatch
 
 ## Gate Level Simulation(GLS)
 
