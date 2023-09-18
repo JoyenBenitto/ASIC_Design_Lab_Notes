@@ -413,104 +413,14 @@ To Check the functionality, We refer to this waveform
 
 ![sync_async_res_wvf](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/5ab8057d-43b6-4d00-9385-46c1ba6279f2)
 
-## [mul2.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/mul2.v) 
-
-![mul2_full](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/d9ac5584-9c21-4308-ad06-d3c83b936871)
-
-When a number is multiplied by 2, it just means that the number is right shifted once. Therefore a bit "0" is appended at the end of the number to be multiplied by 2. Therefore optimisation has been done by appending a ground bit instead of inferring a multiplier.
-
-## [mul8.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/mul8.v)
-
-![mul8_full](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/fd649cc2-3792-4078-8a4d-95ee9bede0f2)
-
-mul8 is nothing but a(8+1) so append 3 zeroes at end for a and add a .Therefore multiplier is not inferred here and only 3 bits are added.
-
-[Back to COURSE](https://github.com/yagnavivek/PES_ASIC_CLASS/tree/main#course)
-
-</details>
-
-<details>
-<summary>DAY 3: Combinational and sequential optimizations</summary>
-<br>
-
-## Logic Optimisation
-
-- *Combinational Logic Optimisation*
-	- Constant Propogation
-	- Boolean logic Optimisation
-- *Sequential Logic Optimisation*
-	- Sequential constant propogation
-	- State optimisation
-	- Retiming
-	- Sequential logic cloning
-
-#### To perform the combinational logic optimisation, use the command ```opt_clean -purge``` before linking to abc  and synthesize.
-
-## [opt_check1.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/opt_check1.v)
-
-![opt_check1](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/02e9e4b7-fd8d-46d4-b486-de5c05df71f5)
-
-## [opt_check2.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/opt_check2.v)
-
-![opt_check2](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/b8092857-4f6c-49bb-a868-6be5856b511f)
-
-## [opt_check3.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/opt_check3.v)
-
-![opt_check3](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/a6309e37-7af5-43be-b218-6662b9c1ddc9)
-
-## [opt_check4.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/opt_check4.v)
-
-![opt_check4](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/8ea3a375-3519-416f-aec9-07ca1b2fb2ca)
-
-## [multipe_modules_opt.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/multipe_modules_opt.v)
-
-![multiple_modules_opt](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/5fd8c401-aa8a-4d29-b3f9-2762956605fc)
+##DAY 3: Combinational and sequential optimizations
 
 Inorder to optimise a verilog files that has submodules, We have to first flatten it, then optimize ```opt_clean -purge``` and complete the synthesis process
 
 Here we can observe that instead of using ```and``` gate and ```or``` gates, its using ```AOI```
+The synthesis sctipts can be found in the verilog folder, the same steps as above can be followed to visualize the sythesised verilog using yosys.
 
-#### sequential logic optimisation
-
-## [dff_const1](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const1.v) [dff_const1_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const1_tb.vcd)
-
-![dff_const1](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/4043a369-f61d-4502-a9f6-155e2f239397)
-
-## [dff_const2](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const2.v) [dff_const2_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const2_tb.vcd)
-
-![dff_const2](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/8f480270-7c16-4a38-ae79-e04ace0bedb3)
-
-## [dff_const3](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const3.v) [dff_const3_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const3_tb.vcd)
-
-![dff_const3](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/4233d328-3e0b-4a21-9d5c-1c289eb1b827)
-
-## [dff_const4](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const4.v) [dff_const4_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const4_tb.vcd)
-
-![dff_const4](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/b8f72f6a-4101-406d-954d-21f8c6fccca4)
-
-## [dff_const5](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const5.v) [dff_const5_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/dff_const5_tb.vcd)
-
-![dff_const5](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/a54969c4-efb1-4264-98e0-077643fb6bb8)
-
-## [counter_opt1.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/counter_opt1.v)
-
-![counter_opt1](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/4268f5c1-b299-491b-91ee-67d805fd6cc9)
-
-Usually a 3 bit counter requires 3 flops but since the output here is dependent on only the LSB and other 2 bits are unused. Therefore only one flop is being down and as we know that LSB toggles every clock cylce,its just using an inverter to invert the output at every clock cycle.
-
-## [counter_opt2.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/counter_opt2.v)
-
-![counter_opt2](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/3149a083-1589-438d-a9e8-7a39f9633d27)
-
-Since the logic is changed such that the output is dependent on all 3 bits, it has inferred 3 flip flops.
-
-[Back to COURSE](https://github.com/yagnavivek/PES_ASIC_CLASS/tree/main#course)
-
-</details>
-
-<details>
-<summary>DAY 4:GLS, SYnthesis solution mismatch</summary>
-<br>
+DAY 4:GLS, SYnthesis solution mismatch
 
 ## Gate Level Simulation(GLS)
 
