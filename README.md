@@ -443,22 +443,4 @@ iverilog <Path_to_primitives.v>/primitives.v <path_to_sky130_fd_sc_hd.v>/sky130_
 ./conditional_mux_gls.out
 gtkwave conditional_mux_tb.vcd
 ```
-
-## presynthesis(above) and post-synthesis simulation(below) [conditional_mux.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/conditional_mux.v) [conditional_mux_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/conditional_mux_tb.v)
-
-![conditional_mux_gls](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/80d621ef-cc15-466a-8c72-cb3b0278d2ed)
-
-Since the presynthesis and post-synthesis waveforms are same, it confirms that the synthesized netlist is functionally correct
-
-## presynthesis(above) and post-synthesis(below) [bad_mux.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/bad_mux.v) [bad_mux_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/bad_mux_tb.v)
-
-![bad_mux_gls](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/16dd15fb-0905-4744-8999-7a46250f90dd)
-
-since the sensitivity list had only select signal, the output changes only when select signal changes irrespective of input 1 and 0. The presynthesis waveform explains the same. But after synthesizing, the waveform can be explained such a way that output is depending on all the input changes. This case is called **Synthesis Simulation Mismatch**
-
-##  presynthesis(above) and post-synthesis(below) [Blocking_error.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/blocking_error.v) [Blocking_error_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/blocking_error_tb.v)
-
-![blocking_error](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/9cdcfa4a-ffcc-4d4f-8815-b2ef4ad43380)
-
-when we observe the code, d=x&c and x=a|b so d depends on x but x is evaluated after d.so d uses previous value of x to compute itself.Therefore we can say that if previous value is being used, then it's behaving like a flop and the same can be observed in waveform. But after synthesis, its behoviour is normal as-if value of x has been computed before giving to d. This state can be called as **Synthesis Simulation Mismatch**
-[Back to COURSE](https://github.com/yagnavivek/PES_ASIC_CLASS/tree/main#course)
+On running the above command we can get the waveforms using gtk wave.
