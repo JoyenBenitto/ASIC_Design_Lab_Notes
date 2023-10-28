@@ -420,6 +420,61 @@ Inorder to optimise a verilog files that has submodules, We have to first flatte
 Here we can observe that instead of using ```and``` gate and ```or``` gates, its using ```AOI```
 The synthesis sctipts can be found in the verilog folder, the same steps as above can be followed to visualize the sythesised verilog using yosys.
 
+> Find all the verilog used in the verilog directory
+
+### opt_check1.v
+![Alt text](<Screenshot from 2023-10-28 17-28-57.png>)
+
+### opt_check2.v
+![Alt text](image.png)
+
+### opt_check3.v
+![Alt text](image-1.png)
+
+### opt_check4.v
+![Alt text](image-2.png)
+
+### multipe_modules_opt.v
+![Alt text](image-3.png)
+
+Inorder to optimise a verilog files that has submodules, We have to first flatten it, then optimize opt_clean -purge and complete the synthesis process
+
+Here we can observe that instead of using 'and' gate and 'or' gates, its using 'AOI'
+
+> The waveforms can be vizualized using gtk wave using vcd 
+
+###  dff_const1 dff_const1_tb.v
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+
+###  dff_const2 dff_const2_tb.v
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+
+### dff_cosnt3 dff_const3_tb.v
+![Alt text](image-9.png)
+![Alt text](image-10.png)
+
+### dff_const4 dff_const4_tb.v
+![Alt text](image-11.png)
+![Alt text](image-12.png)
+
+### dff_const5 dff_const5_tb.v
+![Alt text](image-13.png)
+![Alt text](image-14.png)
+
+### counter_opt1.v
+![Alt text](image-15.png)
+
+### counter_opt2.v
+![Alt text](image-16.png)
+
+>Usually a 3 bit counter requires 3 flops but since the output here is dependent on only the LSB and other 2 bits are unused. Therefore only one flop is being down and as we know that LSB toggles every clock cylce,its just using an inverter to invert the output at every clock cycle. - counter1.v dot diag shows us this
+
+in the second one counter2 the logic is changed such a way that the output is dependent on all 3bits, it has inferred 3 ffs.
+
+---
+
 ## DAY 4:GLS, SYnthesis solution mismatch
 
 ## Gate Level Simulation(GLS)
