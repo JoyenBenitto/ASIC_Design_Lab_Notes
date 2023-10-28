@@ -508,7 +508,7 @@ On running the above command we can get the waveforms using gtk wave.
 > Checking functionality with waveforms
 ![Alt text](image-35.png)
 ![Alt text](image-36.png)
-![Alt text](image-22.png)
+![Alt text](image-37.png)
 
 ## presynthesis(above) and post-synthesis(below) Blocking_error.v Blocking_error_tb.v
 ![Alt text](image-23.png)
