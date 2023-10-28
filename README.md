@@ -387,31 +387,27 @@ iverilog flop.v flop_tb.v -o flop.out
 gtkwave flop_tb.vcd
 ```
 
-## D-flip-flop with an asynchronous reset [asyncres.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/asyncres.v) [asyncres_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/asyncres_tb.v)
-
-![asyncres_stats](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/cef13e93-fc85-47d6-bf81-b1e110d4412c)
+## D-flip-flop with an asynchronous reset asyncres.v asyncres_tb.v
+![Alt text](image-26.png)
+![Alt text](image-27.png)
 
 Since we see a D Flip FLop getting inferred, We use the above mentioned dfflibmap command to map the flops accurately
 View the output waveforms
 
-![asyncres_netlist](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/e3075c6c-714b-42a6-ad99-bde2a7ed3023)
-
+![Alt text](image-28.png)
 To Check the functionality, We refer to this waveform
 
-![asyncres_wvf](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/0788dc0a-95af-43c5-906d-a8961c6887e0)
+## D-flip-flop with an asynchronous set asyncset.v asyncset_tb.v
 
+![Alt text](image-30.png)
 
-## D-flip-flop with an asynchronous set [asyncset.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/asyncset.v) [asyncset_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/asyncset_tb.v)
+![Alt text](image-29.png)
 
-![asyncset_netlist](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/f448f979-d3d7-4f6a-878c-681a7d4db8c0)
+## D-flip-flop with both synchronous and asynchronous reset sync_async_res.v sync_async_res_tb.v
+![Alt text](image-32.png)
+![Alt text](image-31.png)
 
-![asyncset_wvf](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/04126806-59a3-4506-8877-c4901e45c592)
-
-## D-flip-flop with both synchronous and asynchronous reset [sync_async_res.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/sync_async_res.v) [sync_async_res_tb.v](https://github.com/yagnavivek/PES_ASIC_CLASS/blob/main/RTL_Verilog/verilog_files/sync_async_res_tb.v)
-
-![sync_async_res_netlist](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/d0368959-6e54-4cd6-a015-683c6e9158f0)
-
-![sync_async_res_wvf](https://github.com/yagnavivek/PES_ASIC_CLASS/assets/93475824/5ab8057d-43b6-4d00-9385-46c1ba6279f2)
+---
 
 ## DAY 3: Combinational and sequential optimizations
 
