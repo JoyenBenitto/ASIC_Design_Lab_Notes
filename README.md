@@ -498,21 +498,19 @@ On running the above command we can get the waveforms using gtk wave.
 
 ## presynthesis(above) and post-synthesis simulation(below) conditional_mux.v conditional_mux_tb.v
 
-![Alt text](image-18.png)
-![Alt text](image-19.png)
+![Alt text](image-33.png)
+![Alt text](image-34.png)
 
 > The above shows presynthesis and post-synthesis waveforms, as we can see both are so same hece we can confirms that the synthesized netlist is functionally correct
 
 ## presynthesis(above) and post-synthesis(below) bad_mux.v bad_mux_tb.v
 
 > Checking functionality with waveforms
-![Alt text](image-20.png)
-![Alt text](image-21.png)
+![Alt text](image-35.png)
+![Alt text](image-36.png)
 ![Alt text](image-22.png)
 
 ## presynthesis(above) and post-synthesis(below) Blocking_error.v Blocking_error_tb.v
 ![Alt text](image-23.png)
-![Alt text](image-24.png)
-![Alt text](image-25.png)
 
 > find all the TB, Waveforms(vwf files) and verilog files in the verilog directory.
